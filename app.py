@@ -23,37 +23,49 @@ def decoder_chiffre_romain(chiffre):
         return 1000
 
 def decoder_deux_chiffres_romains_identiques(deux_chiffres_identiques):
-    if deux_chiffres_identiques == 'II':
-        return 2
-    elif deux_chiffres_identiques == 'VV':
-        return 10
-    elif deux_chiffres_identiques == 'XX':
-        return 20
-    elif deux_chiffres_identiques == "LL":
-        return 100
-    elif deux_chiffres_identiques == 'CC':
-        return 200
-    elif deux_chiffres_identiques == 'DD':
-        return 1000
-    elif deux_chiffres_identiques == 'MM':
-        return 2000
+    i=0
+    if deux_chiffres_identiques[i] == 'I':
+        return decoder_chiffre_romain(deux_chiffres_identiques[i])*2
+    elif deux_chiffres_identiques[i] == 'V':
+         return decoder_chiffre_romain(deux_chiffres_identiques[i])*2
+    elif deux_chiffres_identiques[i] == 'X':
+         return decoder_chiffre_romain(deux_chiffres_identiques[i])*2
+    elif deux_chiffres_identiques[i] == "L":
+        return decoder_chiffre_romain(deux_chiffres_identiques[i])*2
+    elif deux_chiffres_identiques[i] == 'C':
+        return decoder_chiffre_romain(deux_chiffres_identiques[i])*2
+    elif deux_chiffres_identiques[i] == 'D':
+        return decoder_chiffre_romain(deux_chiffres_identiques[i])*2
+    elif deux_chiffres_identiques[i] == 'M':
+        return decoder_chiffre_romain(deux_chiffres_identiques[i])*2
 
 
 def decoder_n_chiffres_romains_identiques(n_chiffres_identiques):
-    if n_chiffres_identiques == 'III':
-        return 3
-    elif n_chiffres_identiques == 'VVV':
-        return 15
-    elif n_chiffres_identiques == 'XXX':
-        return 30
-    elif n_chiffres_identiques == "LLL":
-        return 150
-    elif n_chiffres_identiques == 'CCC':
-        return 300
-    elif n_chiffres_identiques == 'DDD':
-        return 1500
-    elif n_chiffres_identiques == 'MMM':
-        return 3000
+    i=0
+    longueur_chiffre=len(n_chiffres_identiques)
+    if n_chiffres_identiques[i] == 'I':
+        return decoder_chiffre_romain(n_chiffres_identiques[i])*longueur_chiffre
+
+    elif n_chiffres_identiques[i] == 'V':
+         return decoder_chiffre_romain(n_chiffres_identiques[i])*longueur_chiffre
+
+    elif n_chiffres_identiques[i] == 'X':
+         return decoder_chiffre_romain(n_chiffres_identiques[i])*longueur_chiffre
+
+    elif n_chiffres_identiques[i] == "L":
+        return decoder_chiffre_romain(n_chiffres_identiques[i])*longueur_chiffre
+
+    elif n_chiffres_identiques[i] == 'C':
+        return decoder_chiffre_romain(n_chiffres_identiques[i])*longueur_chiffre
+
+    elif n_chiffres_identiques[i] == 'D':
+        return decoder_chiffre_romain(n_chiffres_identiques[i])*longueur_chiffre
+
+    elif n_chiffres_identiques[i] == 'M':
+        return decoder_chiffre_romain(n_chiffres_identiques[i])*longueur_chiffre
+
+
+
 
 
 

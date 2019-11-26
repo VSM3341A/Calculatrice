@@ -28,5 +28,5 @@ def test_decoder_n_chiffres_romains_identiques():
     assert decoder_n_chiffres_romains_identiques('LLL') == 150
     assert decoder_n_chiffres_romains_identiques('CCC') == 300
     assert decoder_n_chiffres_romains_identiques('DDD') == 1500
-    assert decoder_n_chiffres_romains_identiques('MMM') == 3000
+    assert decoder_n_chiffres_romains_identiques('MMMMM') == 5000
 
