@@ -30,3 +30,22 @@ def test_decoder_n_chiffres_romains_identiques():
     assert decoder_n_chiffres_romains_identiques('DDD') == 1500
     assert decoder_n_chiffres_romains_identiques('MMMMM') == 5000
 
+
+
+def test_conversion_nombre_romain():
+    assert conversion_nombre_romain('IV') == 4
+    assert conversion_nombre_romain('IX') == 9
+    assert conversion_nombre_romain('VIII') == 8
+    assert conversion_nombre_romain('XXV') == 25
+    assert conversion_nombre_romain('CD') == 400
+    assert conversion_nombre_romain('MMXIX') == 2019
+    assert conversion_nombre_romain('MCMXLIV') == 1944
+
+
+
+
+
+
+
+
+

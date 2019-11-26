@@ -66,6 +66,28 @@ def decoder_n_chiffres_romains_identiques(n_chiffres_identiques):
 
 
 
+def conversion_nombre_romain(nombre_romain):
+    longueur_nombre=len(nombre_romain)
+    Chiffre_index = 0
+    Chiffre_index_suivant = 0
+    result = 0
+
+    for i in range (0, longueur_nombre):
+        Chiffre_index=decoder_chiffre_romain(nombre_romain[i])
+
+        if i < longueur_nombre-1:
+            Chiffre_index_suivant = decoder_chiffre_romain(nombre_romain[i + 1])
+
+            if Chiffre_index_suivant > Chiffre_index:
+                Chiffre_index-= 2 * Chiffre_index
+
+        result = result + Chiffre_index
+
+    return result
+
+
+
+
 
 
 
