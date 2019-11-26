@@ -42,7 +42,14 @@ def test_conversion_nombre_romain():
     assert conversion_nombre_romain('MCMXLIV') == 1944
 
 
-
+def test_somme_deux_nombres_romains():
+    assert somme_deux_nombres_romains('X', 'V') == 15
+    assert somme_deux_nombres_romains('IX', 'I') == 15
+    assert somme_deux_nombres_romains('C', 'L') == 150
+    assert somme_deux_nombres_romains('XIV', 'M') == 1014
+    assert somme_deux_nombres_romains('XX', 'V') == 25
+    assert somme_deux_nombres_romains('I', 'MMXIX') == 2020
+    assert somme_deux_nombres_romains('C', 'CD') == 500
 
 
 
