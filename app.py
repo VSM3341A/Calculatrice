@@ -39,11 +39,21 @@ def decoder_deux_chiffres_romains_identiques(deux_chiffres_identiques):
         return 2000
 
 
-
-
-
-
-
+def decoder_n_chiffres_romains_identiques(n_chiffres_identiques):
+    if n_chiffres_identiques == 'III':
+        return 3
+    elif n_chiffres_identiques == 'VVV':
+        return 15
+    elif n_chiffres_identiques == 'XXX':
+        return 30
+    elif n_chiffres_identiques == "LLL":
+        return 150
+    elif n_chiffres_identiques == 'CCC':
+        return 300
+    elif n_chiffres_identiques == 'DDD':
+        return 1500
+    elif n_chiffres_identiques == 'MMM':
+        return 3000
 
 
 

@@ -19,3 +19,14 @@ def test_decoder_deux_chiffres_romains_identiques():
     assert decoder_deux_chiffres_romains_identiques('CC') == 200
     assert decoder_deux_chiffres_romains_identiques('DD') == 1000
     assert decoder_deux_chiffres_romains_identiques('MM') == 2000
+
+
+def test_decoder_n_chiffres_romains_identiques():
+    assert decoder_n_chiffres_romains_identiques('III') == 3
+    assert decoder_n_chiffres_romains_identiques('VVV') == 15
+    assert decoder_n_chiffres_romains_identiques('XXX') == 30
+    assert decoder_n_chiffres_romains_identiques('LLL') == 150
+    assert decoder_n_chiffres_romains_identiques('CCC') == 300
+    assert decoder_n_chiffres_romains_identiques('DDD') == 1500
+    assert decoder_n_chiffres_romains_identiques('MMM') == 3000
+
