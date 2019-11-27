@@ -72,6 +72,14 @@ def test_multiplication_nombres_romains():
     assert multiplication_nombres_romains('C', 'CD') == 40000
 
 
+def test_division_nombres_romains():
+    assert division_nombres_romains('X', 'V') == 2
+    assert division_nombres_romains('IX', 'I') == 9
+    assert division_nombres_romains('C', 'L') == 2
+    assert division_nombres_romains('M', 'X') == 100
+    assert division_nombres_romains('XX', 'V') == 4
+    assert division_nombres_romains('MMXIX', 'IV') == 504
+    assert division_nombres_romains('CD', 'C') == 4
 
 
 
