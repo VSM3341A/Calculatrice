@@ -52,6 +52,15 @@ def test_addition_nombres_romains():
     assert addition_nombres_romains('C', 'CD') == 500
 
 
+def test_soustraction_nombres_romains():
+    assert soustraction_nombres_romains('X', 'V') == 5
+    assert soustraction_nombres_romains('IX', 'I') == 8
+    assert soustraction_nombres_romains('C', 'L') == 50
+    assert soustraction_nombres_romains('XIV', 'M') == -986
+    assert soustraction_nombres_romains('XX', 'V') == 15
+    assert soustraction_nombres_romains('I', 'MMXIX') == -2018
+    assert soustraction_nombres_romains('C', 'CD') == -300
+
 
 
 
