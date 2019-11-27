@@ -95,6 +95,29 @@ def test_calculatrice_nombres_romains():
 
 
 
+######################################################################################
+
+
+
+
+def test_decoder_chiffre_en_romain():
+    assert decoder_chiffre_en_romain(1) == 'I'
+    assert decoder_chiffre_en_romain(2) == 'II'
+    assert decoder_chiffre_en_romain(3) == 'III'
+    assert decoder_chiffre_en_romain(4) == 'IV'
+    assert decoder_chiffre_en_romain(5) == 'V'
+    assert decoder_chiffre_en_romain(6) == 'VI'
+    assert decoder_chiffre_en_romain(7) == 'VII'
+    assert decoder_chiffre_en_romain(8) == 'VIII'
+    assert decoder_chiffre_en_romain(9) == 'IX'
+    assert decoder_chiffre_en_romain(10) == 'X'
+
+    assert decoder_chiffre_en_romain(50) == 'L'
+    assert decoder_chiffre_en_romain(100) == 'C'
+    assert decoder_chiffre_en_romain(500) == 'D'
+    assert decoder_chiffre_en_romain(1000) == 'M'
+
+
 
 
 
