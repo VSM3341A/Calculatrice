@@ -62,6 +62,17 @@ def test_soustraction_nombres_romains():
     assert soustraction_nombres_romains('C', 'CD') == -300
 
 
+def test_multiplication_nombres_romains():
+    assert multiplication_nombres_romains('X', 'V') == 50
+    assert multiplication_nombres_romains('IX', 'I') == 9
+    assert multiplication_nombres_romains('C', 'L') == 5000
+    assert multiplication_nombres_romains('XIV', 'M') == 14000
+    assert multiplication_nombres_romains('XX', 'V') == 100
+    assert multiplication_nombres_romains('I', 'MMXIX') == 2019
+    assert multiplication_nombres_romains('C', 'CD') == 40000
+
+
+
 
 
 
