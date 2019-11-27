@@ -84,8 +84,23 @@ def conversion_nombre_romain(nombre_romain):
 
     return result
 
+def addition_nombres_romains(nombre_romain1, nombre_romain2):
+    nombre_entier1 = conversion_nombre_romain(nombre_romain1)
+    nombre_entier2 = conversion_nombre_romain(nombre_romain2)
+
+    resultat = nombre_entier1 + nombre_entier2
+
+    return resultat
 
 
+
+def soustraction_nombres_romains(nombre_romain1, nombre_romain2):
+    nombre_entier1 = conversion_nombre_romain(nombre_romain1)
+    nombre_entier2 = conversion_nombre_romain(nombre_romain2)
+
+    resultat = nombre_entier1 - nombre_entier2
+
+    return resultat
 
 
 
