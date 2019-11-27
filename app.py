@@ -174,6 +174,38 @@ def decoder_chiffre_en_romain(chiffre):
 
 
 
+chiffres_romains=[("M", 1000), ("CM", 900), ("D", 500),("CD", 400), ("C", 100),  ("XC", 90),
+                  ("L", 50),   ("XL", 40),  ("X", 10), ("IX", 9),   ("V", 5),    ("IV", 4), ("I", 1)]
+
+def conversion_en_chiffre_romain(nombre):
+    resultat_chiffre_romain = []
+
+    for lettre_romain, entier in chiffres_romains:
+        while entier <= nombre:
+            nombre -= entier
+            resultat_chiffre_romain.append(lettre_romain)
+
+    return ''.join(resultat_chiffre_romain)
+
+
+
+
+def calculatrice_nombres_romains_et_conversion_en_chiffre_romain(operateur, nombre_romain1, nombre_romain2):
+    if operateur == '+':
+        return conversion_en_chiffre_romain(addition_nombres_romains(nombre_romain1, nombre_romain2))
+    elif operateur == '-':
+        return conversion_en_chiffre_romain(soustraction_nombres_romains(nombre_romain1, nombre_romain2))
+    elif operateur == '*':
+        return conversion_en_chiffre_romain(multiplication_nombres_romains(nombre_romain1, nombre_romain2))
+    elif operateur == '/':
+        return conversion_en_chiffre_romain(division_nombres_romains(nombre_romain1, nombre_romain2))
+
+
+
+
+
+
+
 
 
 

@@ -86,10 +86,13 @@ def test_division_nombres_romains():
 def test_calculatrice_nombres_romains():
     assert calculatrice_nombres_romains('+', 'X', 'V') == 15
     assert calculatrice_nombres_romains('+', 'XIV', 'M') == 1014
+
     assert calculatrice_nombres_romains('-', 'X', 'V') == 5
     assert calculatrice_nombres_romains('-', 'XIV', 'M') == -986
+
     assert calculatrice_nombres_romains('*', 'X', 'V') == 50
     assert calculatrice_nombres_romains('*', 'XX', 'VI') == 120
+
     assert calculatrice_nombres_romains('/', 'X', 'V') == 2
     assert calculatrice_nombres_romains('/', 'IX', 'III') == 3
 
@@ -111,17 +114,35 @@ def test_decoder_chiffre_en_romain():
     assert decoder_chiffre_en_romain(8) == 'VIII'
     assert decoder_chiffre_en_romain(9) == 'IX'
     assert decoder_chiffre_en_romain(10) == 'X'
-
     assert decoder_chiffre_en_romain(50) == 'L'
     assert decoder_chiffre_en_romain(100) == 'C'
     assert decoder_chiffre_en_romain(500) == 'D'
     assert decoder_chiffre_en_romain(1000) == 'M'
 
 
+def test_conversion_en_chiffre_romain():
+    assert conversion_en_chiffre_romain(4) == 'IV'
+    assert conversion_en_chiffre_romain(22) == 'XXII'
+    assert conversion_en_chiffre_romain(196) == 'CXCVI'
+    assert conversion_en_chiffre_romain(512) == 'DXII'
+    assert conversion_en_chiffre_romain(14) == 'XIV'
+    assert conversion_en_chiffre_romain(32) == 'XXXII'
 
 
 
 
+def test_calculatrice_nombres_romains_et_conversion_en_chiffre_romain():
+    assert calculatrice_nombres_romains_et_conversion_en_chiffre_romain('+', 'X', 'V') == 'XV'
+    assert calculatrice_nombres_romains_et_conversion_en_chiffre_romain('+', 'XIV', 'M') == 'MXIV'
+
+    assert calculatrice_nombres_romains_et_conversion_en_chiffre_romain('-', 'X', 'V') == 'V'
+    assert calculatrice_nombres_romains_et_conversion_en_chiffre_romain('-', 'M', 'C') == 'CM'
+
+    assert calculatrice_nombres_romains_et_conversion_en_chiffre_romain('*', 'X', 'V') == 'L'
+    assert calculatrice_nombres_romains_et_conversion_en_chiffre_romain('*', 'XX', 'VI') == 'CXX'
+
+    assert calculatrice_nombres_romains_et_conversion_en_chiffre_romain('/', 'X', 'V') == 'II'
+    assert calculatrice_nombres_romains_et_conversion_en_chiffre_romain('/', 'IX', 'III') == 'III'
 
 
 
