@@ -1,6 +1,5 @@
 result_temp1=0
 result_temp2=0
-result_temp3=0
 result=0
 
 
@@ -119,6 +118,24 @@ def division_nombres_romains(nombre_romain1, nombre_romain2):
     resultat = nombre_entier1 // nombre_entier2
 
     return resultat
+
+
+def calculatrice_nombres_romains(operateur, nombre_romain1, nombre_romain2):
+    if operateur == '+':
+        return addition_nombres_romains(nombre_romain1, nombre_romain2)
+    elif operateur == '-':
+        return soustraction_nombres_romains(nombre_romain1, nombre_romain2)
+    elif operateur == '*':
+        return multiplication_nombres_romains(nombre_romain1, nombre_romain2)
+    elif operateur == '/':
+        return division_nombres_romains(nombre_romain1, nombre_romain2)
+
+
+
+
+
+
+
 
 
 

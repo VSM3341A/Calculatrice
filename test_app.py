@@ -83,4 +83,25 @@ def test_division_nombres_romains():
 
 
 
+def test_calculatrice_nombres_romains():
+    assert calculatrice_nombres_romains('+', 'X', 'V') == 15
+    assert calculatrice_nombres_romains('+', 'XIV', 'M') == 1014
+    assert calculatrice_nombres_romains('-', 'X', 'V') == 5
+    assert calculatrice_nombres_romains('-', 'XIV', 'M') == -986
+    assert calculatrice_nombres_romains('*', 'X', 'V') == 50
+    assert calculatrice_nombres_romains('*', 'XX', 'VI') == 120
+    assert calculatrice_nombres_romains('/', 'X', 'V') == 2
+    assert calculatrice_nombres_romains('/', 'IX', 'III') == 3
+
+
+
+
+
+
+
+
+
+
+
+
 
